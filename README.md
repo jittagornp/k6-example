@@ -113,6 +113,8 @@ $ ./k6 run --out web-dashboard hello-k6.js
 
 ต้องเปิดในขณะที่ Command ยัง run ไม่เสร็จ ถึงจะเปิดได้ เพราะมันต้องดูแบบ realtime เท่านั้น
 
+[http://127.0.0.1:5665/ui/?endpoint=/](http://127.0.0.1:5665/ui/?endpoint=/)
+
 ![](./dashboard.png)
 
 ### การ ดู Dashboard แบบไม่ realtime  
