@@ -1,10 +1,10 @@
-# k6s example
+# k6 example
 
-> ตัวอย่างการเขียน/ใช้งาน k6s
+> ตัวอย่างการเขียน/ใช้งาน k6
 
-# วิธีการใช้งาน k6s
+# วิธีการใช้งาน k6
 
-ในตัวอย่างนี้จะใช้งานบนเครื่อง Mac นะครับ ถ้าอยากใช้งานกับ OS อื่น ๆ ให้อ่านที่เอกสาร [Installation](https://k6.io/docs/get-started/installation/) ของ k6s
+ในตัวอย่างนี้จะใช้งานบนเครื่อง Mac นะครับ ถ้าอยากใช้งานกับ OS อื่น ๆ ให้อ่านที่เอกสาร [Installation](https://k6.io/docs/get-started/installation/) ของ k6
 
 1. การติดตั้ง/Installation
 
@@ -26,13 +26,13 @@ $ k6 --version
 # Command format
 # k6 new <script-name.js>
 
-$ k6 new hello-k6s.js
+$ k6 new hello-k6.js
 ```
 
 3. Run
 
 ```sh
-$ k6 run hello-k6s.js
+$ k6 run hello-k6.js
 ```
 
 ![](how-to-use.png)
@@ -40,7 +40,7 @@ $ k6 run hello-k6s.js
 4. การ Run ผ่าน Docker 
 
 ```sh
-$ docker run -v $(pwd):/script --rm -i grafana/k6 run /script/hello-k6s.js 
+$ docker run -v $(pwd):/script --rm -i grafana/k6 run /script/hello-k6.js 
 ```
 
 ![](./run-via-docker.png)
@@ -84,7 +84,7 @@ export PATH=$(go env GOPATH)/bin:$PATH
 ใช้ `./k6` แทน `k6`
 
 ```sh
-$ ./k6 run --out web-dashboard hello-k6s.js
+$ ./k6 run --out web-dashboard hello-k6.js
 ```
 
 ![](./run-with-dashboard.png)
@@ -98,12 +98,12 @@ $ ./k6 run --out web-dashboard hello-k6s.js
 
 ### การ ดู Dashboard แบบไม่ realtime  
 
-จะต้อง run k6s แล้ว save result เป็น `.json` ไว้ แล้วค่อยเอามาเปิดผ่าน dashbaord อีกที 
+จะต้อง run k6 แล้ว save result เป็น `.json` ไว้ แล้วค่อยเอามาเปิดผ่าน dashbaord อีกที 
 
 5. Run (Save output เป็น .json)
 
 ```sh
-$ ./k6 run --out json=output.json hello-k6s.js
+$ ./k6 run --out json=output.json hello-k6.js
 ```
 
 6. Install **k6-web-dashboard**
