@@ -20,7 +20,7 @@ export const options = {
   //     projectID: "",
   //     // The name of the test in the k6 Cloud UI.
   //     // Test runs with the same name will be grouped.
-  //     name: "hello-k6s.js"
+  //     name: "hello-k6.js"
   //   }
   // },
 
