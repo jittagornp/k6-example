@@ -47,7 +47,9 @@ $ docker run -v $(pwd):/script --rm -i grafana/k6 run /script/hello-k6s.js
 
 # Dashboard
 
-1. Install xk6
+1. Install **xk6**
+
+[https://github.com/grafana/xk6/](https://github.com/grafana/xk6/)
 
 > This command line tool and associated Go package makes it easy to make custom builds of k6. -- [Document](https://github.com/grafana/xk6)
 
@@ -55,7 +57,9 @@ $ docker run -v $(pwd):/script --rm -i grafana/k6 run /script/hello-k6s.js
 $ go install go.k6.io/xk6/cmd/xk6@latest
 ```
 
-2. Intall dashboard
+2. Intall **k6 extension** 
+
+[https://github.com/grafana/xk6-dashboard](https://github.com/grafana/xk6-dashboard)
 
 ```sh
 $ xk6 build --with github.com/grafana/xk6-dashboard@latest
@@ -103,6 +107,8 @@ $ ./k6 run --out json=output.json hello-k6s.js
 ```
 
 6. Install **k6-web-dashboard**
+
+[https://github.com/grafana/xk6-dashboard/tree/master/cmd/k6-web-dashboard](https://github.com/grafana/xk6-dashboard/tree/master/cmd/k6-web-dashboard)
 
 > The k6-web-dashboard is a command-line tool that enables the dashboard event file (saved during the previous k6 run) to be played back (and displayed in a browser). In addition to playback, it also offers the possibility to create a single file HTML report from the event file.
 
