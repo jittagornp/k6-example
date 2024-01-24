@@ -15,6 +15,8 @@
 - มี Extensions ต่าง ๆ ให้สามารถ Install เพิ่มเติมได้
 - พัฒนาโดยทีม Grafana
 
+![](./k6-script.png)
+
 # วิธีการใช้งาน k6
 
 ในตัวอย่างนี้จะใช้งานบนเครื่อง Mac นะครับ ถ้าอยากใช้งานกับ OS อื่น ๆ ให้อ่านที่เอกสาร [Installation](https://k6.io/docs/get-started/installation/) ของ k6
