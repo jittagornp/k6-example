@@ -131,3 +131,37 @@ $ k6-web-dashboard replay output.ndjson
 ![](./replay-dashboard.png)
 
 ![](./replay-dashboard-result.png)
+
+### Run dashbaord ผ่าน Docker
+
+```sh
+$ docker run --rm -i -p 5665:5665 -v $(pwd):/script ghcr.io/grafana/xk6-dashboard:0.7.2 run --out web-dashboard /script/hello-k6.js
+```
+
+![](./run-with-dashboard-via-docker.png)
+
+![](./dashboard-with-docker-result.png)
+
+### Export to HTML
+
+```sh
+$ docker run --rm -i -p 5665:5665 -v $(pwd):/script ghcr.io/grafana/xk6-dashboard:0.7.2 run --out web-dashboard=export=/script/output.html /script/hello-k6.js
+```
+
+![](./export-to-html-via-docker.png)
+
+จะได้ output เป็นไฟล์ html แบบนี้ 
+
+![](./output-html-via-docker.png)
+
+เมื่อเราเปิดไฟล์ดู จะได้ result หน้าตาแบบนี้
+
+![](./output-html-1.png)
+
+![](./output-html-2.png)
+
+![](./output-html-3.png)
+
+![](./output-html-4.png)
+
+![](./output-html-5.png)
