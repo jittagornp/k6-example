@@ -17,6 +17,10 @@
 
 ![](./k6-script.png)
 
+# Official Document
+
+[https://k6.io/docs/](https://k6.io/docs/)
+
 # วิธีการใช้งาน k6
 
 ในตัวอย่างนี้จะใช้งานบนเครื่อง Mac นะครับ ถ้าอยากใช้งานกับ OS อื่น ๆ ให้อ่านที่เอกสาร [Installation](https://k6.io/docs/get-started/installation/) ของ k6
