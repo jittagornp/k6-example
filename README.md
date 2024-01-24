@@ -2,6 +2,19 @@
 
 > ตัวอย่างการเขียน/ใช้งาน k6
 
+<img src="./k6-icon.png" width="200">
+
+# k6 คืออะไร ?
+
+- k6 เป็น Load test tool ตัวนึงที่คนนิยมใช้งานกันอยู่ในปัจจุบัน
+- ถูกเขียนขึ้นด้วยภาษา Go
+- กิน Resource น้อย
+- ทำให้สามารถ จำลองปริมาณ Load/Virtual users ได้ในปริมาณมาก
+- การกำหนด Senario ของการ Test เขียนผ่าน Code Javascript 
+- ไม่มี GUI สำหรับ Build Script (ยกเว้นแบบ On Cloud)
+- มี Extensions ต่าง ๆ ให้สามารถ Install เพิ่มเติมได้
+- พัฒนาโดยทีม Grafana
+
 # วิธีการใช้งาน k6
 
 ในตัวอย่างนี้จะใช้งานบนเครื่อง Mac นะครับ ถ้าอยากใช้งานกับ OS อื่น ๆ ให้อ่านที่เอกสาร [Installation](https://k6.io/docs/get-started/installation/) ของ k6
