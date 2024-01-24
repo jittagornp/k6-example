@@ -113,7 +113,7 @@ $ ./k6 run --out web-dashboard hello-k6.js
 
 ### การ ดู Dashboard แบบไม่ realtime  
 
-จะต้อง run k6 แล้ว save result เป็น `.json` ไว้ แล้วค่อยเอามาเปิดผ่าน dashbaord อีกที 
+จะต้อง run k6 แล้ว save result เป็น `.json` ไว้ แล้วค่อยเอามาเปิดผ่าน dashboard อีกที 
 
 5. Run (Save output เป็น .json)
 
@@ -147,7 +147,7 @@ $ k6-web-dashboard replay output.ndjson
 
 ![](./replay-dashboard-result.png)
 
-### Run dashbaord ผ่าน Docker
+### Run dashboard ผ่าน Docker
 
 ```sh
 $ docker run --rm -i -p 5665:5665 -v $(pwd):/script ghcr.io/grafana/xk6-dashboard:0.7.2 run --out web-dashboard /script/hello-k6.js
