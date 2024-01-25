@@ -6,7 +6,7 @@
 
 # Table of Contens
 
-- [k6 คืออะไร ?](#k6-คืออะไร)
+- [k6 คืออะไร ?](#k6-คืออะไร-)
 - [Official Document](#official-document)
 - [วิธีการใช้งาน k6](#วิธีการใช้งาน-k6)
 - [Dashboard](#dashboard)
