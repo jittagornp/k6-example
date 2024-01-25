@@ -4,6 +4,19 @@
 
 <img src="./k6-icon.png" width="200">
 
+# Table of Contens
+
+- [k6 คืออะไร ?](#k6-คืออะไร)
+- [Official Document](#official-document)
+- [วิธีการใช้งาน k6](#วิธีการใช้งาน-k6)
+- [Dashboard](#dashboard)
+  - [การ ดู Dashboard แบบ realtime](#การ-ดู-dashboard-แบบ-realtime)
+  - [การ ดู Dashboard แบบไม่ realtime](#การ-ดู-dashboard-แบบไม่-realtime)
+  - [Run dashboard ผ่าน Docker](#run-dashboard-ผ่าน-docker)
+  - [Export to HTML](#export-to-html)
+- [Extensions](#extensions)
+- [Custom k6](#custom-k6)
+
 # k6 คืออะไร ?
 
 - k6 เป็น Load test tool ตัวนึงที่คนนิยมใช้งานกันอยู่ในปัจจุบัน
@@ -97,6 +110,8 @@ export PATH=$(go env GOPATH)/bin:$PATH
 ![](./install-dashboard-result.png)
 
 ให้ใช้ k6 นี้ run dashboard แทนตัว global command 
+
+### การ ดู Dashboard แบบ realtime
 
 3. Run  
 
@@ -225,13 +240,13 @@ $ docker build -t custom-k6 .
 ตัวอย่างการ Run
 
 ```sh
-$ docker run --rm -i -p 5665:5665 -v $(pwd):/script custom-k6 run --out web-dashboard /script/hello-k6.js 
+$ docker run --rm -i -p 5665:5665 -v $(pwd):/script custom-k6 run --out web-dashboard=export=/script/output.html /script/hello-k6.js 
 ```
 
 Connect Mongodb
 
 ```sh
-$ docker run --rm -i -p 5665:5665 --add-host host.docker.internal:host-gateway -v $(pwd)/examples:/script custom-k6 run --out web-dashboard /script/connect-mongodb.js
+$ docker run --rm -i -p 5665:5665 --add-host host.docker.internal:host-gateway -v $(pwd)/examples:/script custom-k6 run --out web-dashboard=export=/script/output.html /script/connect-mongodb.js
 ```
 
 ![](./connect-mongodb.png)
