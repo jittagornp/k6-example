@@ -186,3 +186,41 @@ $ docker run --rm -i -p 5665:5665 -v $(pwd):/script ghcr.io/grafana/xk6-dashboar
 ![](./output-html-4.png)
 
 ![](./output-html-5.png)
+
+# Extensions
+
+ดูทั้งหมดได้จาก
+
+[https://k6.io/docs/extensions/](https://k6.io/docs/extensions/)
+
+# Custom k6
+
+ตัวอย่างการ Custom k6 โดยเพิ่ม dashboard และ mongodb extension เข้าไป
+
+Dockerfile
+
+```Dockerfile
+FROM golang:latest as builder
+
+RUN go install go.k6.io/xk6/cmd/xk6@latest
+
+RUN xk6 build \
+    --with github.com/grafana/xk6-dashboard@latest \
+    --with github.com/GhMartingit/xk6-mongo@latest \
+    --output /k6
+
+FROM grafana/k6:latest
+COPY --from=builder /k6 /usr/bin/k6
+```
+
+Build
+
+```sh
+$ docker build -t custom-k6 .
+```
+
+ตัวอย่างการ Run
+
+```sh
+docker run --rm -i -p 5665:5665 -v $(pwd):/script custom-k6 run --out web-dashboard /script/hello-k6.js 
+```
