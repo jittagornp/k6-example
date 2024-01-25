@@ -197,6 +197,9 @@ $ docker run --rm -i -p 5665:5665 -v $(pwd):/script ghcr.io/grafana/xk6-dashboar
 
 ตัวอย่างการ Custom k6 โดยเพิ่ม dashboard และ mongodb extension เข้าไป
 
+- xk6-dashbaord - [https://github.com/grafana/xk6-dashboard](https://github.com/grafana/xk6-dashboard)
+- xk6-mongo - [https://github.com/GhMartingit/xk6-mongo](https://github.com/GhMartingit/xk6-mongo)
+
 Dockerfile
 
 ```Dockerfile
@@ -222,5 +225,13 @@ $ docker build -t custom-k6 .
 ตัวอย่างการ Run
 
 ```sh
-docker run --rm -i -p 5665:5665 -v $(pwd):/script custom-k6 run --out web-dashboard /script/hello-k6.js 
+$ docker run --rm -i -p 5665:5665 -v $(pwd):/script custom-k6 run --out web-dashboard /script/hello-k6.js 
 ```
+
+Connect Mongodb
+
+```sh
+$ docker run --rm -i -p 5665:5665 --add-host host.docker.internal:host-gateway -v $(pwd)/examples:/script custom-k6 run --out web-dashboard /script/connect-mongodb.js
+```
+
+![](./connect-mongodb.png)
