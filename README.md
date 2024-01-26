@@ -6,6 +6,7 @@
 
 # Table of Contens
 
+- [Google Slide](#google-slide)
 - [k6 คืออะไร ?](#k6-คืออะไร-)
 - [Official Document](#official-document)
 - [วิธีการใช้งาน k6](#วิธีการใช้งาน-k6)
@@ -16,6 +17,10 @@
   - [Export to HTML](#export-to-html)
 - [Extensions](#extensions)
 - [Custom k6](#custom-k6)
+
+# Google Slide
+
+[k6 Introduction](https://docs.google.com/presentation/d/1LOxEKgRQL0Zc2efLrvW7dVZ_gBuP-DmfPMqAUvYzwRs/edit?usp=sharing)
 
 # k6 คืออะไร ?
 
